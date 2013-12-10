@@ -1,12 +1,14 @@
 <html>
 <head>
-	
 	<title>Music Player</title>
 	
 	<link href="style.css" rel="stylesheet" type="text/css">
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.1/themes/black-tie/jquery-ui.css" />	
+	<script src="http://w.soundcloud.com/player/api.js"></script>
+	<script src="http://connect.soundcloud.com/sdk.js"></script>
 	<script src="main.js"></script>
 
 </head>
@@ -16,7 +18,7 @@
 				<ul>
 					<li><a href="#home">Home</a></li>
 					<li><a href="#search">Search</a></li>
-					<li><a href="#searchResults">Search results</a></li>
+					<li><a href="#searchResults">Search Results</a></li>
 				</ul>
 				<div id="home">Hello!</div>
 				<div id="search">
@@ -25,9 +27,21 @@
 						<input type="submit" value="Search">
 					</form>
 				</div>
-                
+				<div id="searchResults">There are no results yet.</div>
 			</div>
-			
+			<div id="player">
+				<iframe id="soundcloudWidget"
+					src="http://w.soundcloud.com/player/?url=https://soundcloud.com/user3879902/enya-only-time&show_artwork=true&liking=false&sharing=false&auto_play=true"
+					width="420"
+					height="120"
+					frameborder="no">
+				</iframe>
+				<div>
+					<div id="emptyQueue">The queue is currently empty.</div>
+					<div id="queue"><span>The queue</span><a id="next" class="ui-state-default ui-corner-all" href="#" title="Next"><span class="ui-icon ui-icon-seek-next"></span></a></div>
+					<ol id="playlist"></ol>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

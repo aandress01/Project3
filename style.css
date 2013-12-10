@@ -2,3 +2,33 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
+#content {
+	width: 1000px;
+	margin: auto;
+}
+#pages {
+	width: 560px;
+	float: right;
+}
+#player {
+	width: 420px;
+}
+#player li, #searchResults li {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+#player li a, #searchResults li a {
+	position: absolute;
+	right: 0;
+	display: none;	
+}
+#player li:hover a, #searchResults li:hover a{
+	display: inline;
+}
+#queue {
+	display: none;
+}
+#next {
+	float: right;
+}
